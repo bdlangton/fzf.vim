@@ -811,7 +811,7 @@ function! fzf#vim#grep(grep_command, has_column, ...)
   \ 'column':  a:has_column,
   \ 'options': ['--ansi', '--prompt', capname.'> ',
   \             '--multi', '--bind', 'alt-a:select-all,alt-d:deselect-all',
-  \             '--delimiter', ':', '--preview-window', '+{2}-/2']
+  \             '--delimiter', ':', '--nth', '4..', '--preview-window', '+{2}-/2']
   \}
   function! opts.sink(lines)
     return s:ag_handler(a:lines, self.column)
